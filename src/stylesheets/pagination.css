@@ -1,0 +1,32 @@
+.nextButton, .previousButton{
+    text-decoration: none;
+    color:black
+}
+
+.paginationButtonsContainer{
+    display: flex;
+    justify-content: space-around;
+    margin:auto;
+    width: 40%;
+    text-decoration: none;
+    list-style: none;
+    color:black;
+    background-color: rgba(181, 181, 181, 0.117);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.paginationPages{
+    text-decoration: none;
+    list-style: none;
+    height:30px;
+    width:30px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paginationActiveButton{
+    background-color: rgb(138, 199, 209);
+    border-radius: 10px;
+}

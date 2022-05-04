@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap');
+
+/* ---------- Edit and View Modal styling ---------- */
+#modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(100, 100, 100, 0.9);
+}
+
+#modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: fit-content;
+  width: 70vw;
+  background-color: white;
+  font-family: 'Roboto', sans-serif
+}
+
+#modalCloseBtn {
+  width: fit-content;
+  border: none;
+  background: transparent;
+}
+
+/* Close button on view and edit modals */
+.closeBtnContainer {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  padding: 10px;
+}
+
+/* Centering checkbox on Edit modal */
+.checkboxContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Submit buttons on all forms  */
+#formBtn {
+  height:50px;
+  width:150px;
+  border:none;
+  background:rgb(138, 199, 209, 0.592);
+  position:relative;
+  border-radius:5px;
+  color:#000000;
+  font-size:1.2em;
+  font-weight:500;
+  overflow:hidden;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+#formBtn:hover {
+  background:rgba(138, 200, 209);
+}
+
+.btnHolder {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+/* -------------------------------------*/
+
+/* ------- Pending Requests Page Styling -------- */
+.pendingHeader {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  font-family: 'Roboto', sans-serif
+}
+
+/* View and Edit buttons on Pending page */
+.dataBtn {
+  border: none;
+  background-color: transparent;
+}
+/* ----------------------------------------*/
+
+#viewTable {
+ overflow-wrap: break-word;
+ overflow: scroll;
+  height: 80vh;
+}

@@ -1,0 +1,16 @@
+
+.navContainer {
+    display:flex;
+    width: fit-content;
+    margin-left:20px;
+  }
+
+  .logoutBtn {
+    color:black;
+    position: absolute;
+    bottom: 30px;
+  }
+  
+  .navImg {
+    margin:5px
+  }

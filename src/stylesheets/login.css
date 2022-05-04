@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+/* Splitting login page to two sections via grid */
+.loginMain {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100%;
+}
+
+/* Styling leftside and title */
+.loginLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.loginTitle {
+  color: #297373;
+  margin: auto;
+  font-family: 'Roboto', sans-serif
+}
+
+#logTitle{
+  font-size: 80px;
+}
+
+#logSub{
+  font-size: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+  #logTitle {
+    font-size: 50px;
+  }
+
+  #logSub{
+    font-size: 20px;
+  }
+}
+/*---------------------------*/
+
+/* Vertically centering login form  */
+.loginFormContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
