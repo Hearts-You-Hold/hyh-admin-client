@@ -64,7 +64,7 @@ export default function PendingRequests() {
   //sending to-be-deleted item's ID to database
   async function handleDelete(e) {
     try {
-      let response = await fetch(`http://localhost:8003/delete`, {
+      let response = await fetch(`https://hyh-admin-server.herokuapp.com/delete`, {
         method: "POST",
         body: JSON.stringify({
           itemId: e.target.id,
@@ -117,7 +117,7 @@ export default function PendingRequests() {
   //sending clicked requests info to server to be updated
   async function handleUnpublish(e) {
     try {
-      let response = await fetch(`http://localhost:8003/unpublish`, {
+      let response = await fetch(`https://hyh-admin-server.herokuapp.com/unpublish`, {
         method: "POST",
         body: JSON.stringify({
           itemId: e.target.id,
@@ -189,7 +189,7 @@ export default function PendingRequests() {
     let isConnectedToServer = true;
     async function getData() {
       try {
-        let response = await fetch(`http://localhost:8003/`);
+        let response = await fetch(`https://hyh-admin-server.herokuapp.com/`);
         response = await response.json();
         setPending(response);
         setDataLoaded(true);

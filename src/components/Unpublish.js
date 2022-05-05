@@ -40,7 +40,7 @@ export default function Unpublish() {
   //fetching iniital data on page load
   async function getUnpublished() {
     try {
-      let response = await fetch("http://localhost:8003/unpublish");
+      let response = await fetch("https://hyh-admin-server.herokuapp.com/unpublish");
       response = await response.json();
       setPending(response);
     } catch (error) {
@@ -100,7 +100,7 @@ export default function Unpublish() {
   //sending request info to server to be updated
   async function handlePublish(e) {
     try {
-      let response = await fetch(`http://localhost:8003/publish`, {
+      let response = await fetch(`https://hyh-admin-server.herokuapp.com/publish`, {
         method: "POST",
         body: JSON.stringify({
           itemId: e.target.id,
@@ -145,7 +145,7 @@ export default function Unpublish() {
   //sending to-be-deleted item's ID to database
   async function handleDelete(e) {
     try {
-      let response = await fetch(`http://localhost:8003/delete`, {
+      let response = await fetch(`https://hyh-admin-server.herokuapp.com/delete`, {
         method: "POST",
         body: JSON.stringify({
           itemId: e.target.id, //button id (which is id of item clicked)

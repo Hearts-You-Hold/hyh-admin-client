@@ -24,7 +24,7 @@ export default function RequestsForm() {
     try {
       //displaying successful notification
       toast.success("Saved Successfully");
-      let response = await fetch(`http://localhost:8003/`, {
+      let response = await fetch(`https://hyh-admin-server.herokuapp.com/`, {
         method: "POST",
         body: JSON.stringify({
           itemName: item,

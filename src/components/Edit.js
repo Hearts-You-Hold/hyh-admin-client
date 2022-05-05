@@ -32,7 +32,7 @@ export default function Edit(props) {
     try {
       //displaying successful notification
       toast.success('Edit Saved Successfully')
-      let response = await fetch(`http://localhost:8003/edit`, {
+      let response = await fetch(`https://hyh-admin-server.herokuapp.com/edit`, {
         method: "POST",
         body: JSON.stringify({
           itemId: itemId,

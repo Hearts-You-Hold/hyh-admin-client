@@ -60,7 +60,7 @@ export default function FundedRequets() {
   //sending to-be-deleted item's ID to database
   async function handleDelete(e) {
     try {
-      let response = await fetch(`http://localhost:8003/delete`, {
+      let response = await fetch(`https://hyh-admin-server.herokuapp.com/delete`, {
         method: "POST",
         body: JSON.stringify({
           itemId: e.target.id,
@@ -121,7 +121,7 @@ export default function FundedRequets() {
     let isConnectedToServer = true;
     async function getData() {
       try {
-        let response = await fetch(`http://localhost:8003/funded-requests`);
+        let response = await fetch(`https://hyh-admin-server.herokuapp.com/funded-requests`);
         response = await response.json();
         setPending(response);
         setDataLoaded(true);
