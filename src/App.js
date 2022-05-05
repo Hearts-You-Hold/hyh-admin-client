@@ -6,6 +6,7 @@ import Dashboard from "./components/Dashboard";
 import PendingRequests from "./components/Pending";
 import FundedRequets from "./components/Funded";
 import Unpublish from "./components/Unpublish";
+import Reset from "./components/Reset"
 import "./stylesheets/main.css";
 import "./stylesheets/pending.css";
 import "./stylesheets/login.css";
@@ -25,6 +26,7 @@ function App() {
           <Route path='/pending' element={<PendingRequests />}/>
           <Route path='/funded' element={<FundedRequets />} />
           <Route path='/unpublished' element={<Unpublish/>}/>
+          <Route path='/reset' element={<Reset/>}/>
         </Routes>
       </BrowserRouter>
     </div>
