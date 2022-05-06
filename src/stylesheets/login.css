@@ -38,6 +38,18 @@
     font-size: 20px;
   }
 }
+
+#loginForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  height:60%;
+  justify-content: space-evenly;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width:50%;
+}
+
 /*---------------------------*/
 
 /* Vertically centering login form  */
@@ -45,4 +57,46 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+.input{
+  display: flex;
+  flex-direction: column;
+  width:80%;
+}
+
+#loginBtn{
+  height:50px;
+  width:150px;
+  border:none;
+  background:rgb(138, 199, 209, 0.592);
+  border-radius:5px;
+  color:#000000;
+  font-size:1.2em;
+  font-weight:500;
+}
+
+#resetBtn{
+  border:none;
+  background-color: transparent;
+  color:#297373;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#loginBtn:hover{
+  background-color:#297373a2
+}
+
+#alertMsg{
+  color:red;
+  font-weight: bold;
+}
+
+#viewPassword{
+  border:none;
+  background-color: transparent;
+  float: right;
+  width:10%;
 }
