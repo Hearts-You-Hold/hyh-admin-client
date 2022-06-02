@@ -32,7 +32,6 @@ export default function Edit(props) {
   async function handleSubmit(e) {
     e.preventDefault();
     setFormSubmitted(true);
-    if (Userfront.tokens.accessToken){
     try {
       //displaying successful notification
       toast.success("Edit Saved Successfully");
@@ -60,7 +59,6 @@ export default function Edit(props) {
     } catch (error) {
       console.log(error, "404 - Not Found");
     }
-  }
   }
 
   //force reloading page after 1 second if form submitted successfully

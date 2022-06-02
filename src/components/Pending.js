@@ -64,7 +64,6 @@ export default function PendingRequests() {
 
   //sending to-be-deleted item's ID to database
   async function handleDelete(e) {
-    if (Userfront.tokens.accessToken){
     try {
       let response = await fetch(`https://hyh-admin-server.herokuapp.com/delete`, {
         method: "POST",
@@ -81,7 +80,6 @@ export default function PendingRequests() {
     } catch (error) {
       console.log(error, "404 - Not Found");
     }
-  }
   }
   //-----END delete functionality-------------
 
@@ -120,7 +118,6 @@ export default function PendingRequests() {
 
   //sending clicked requests info to server to be updated
   async function handleUnpublish(e) {
-    if (Userfront.tokens.accessToken){
     try {
       let response = await fetch(`https://hyh-admin-server.herokuapp.com/unpublish`, {
         method: "POST",
@@ -148,7 +145,6 @@ export default function PendingRequests() {
     } catch (error) {
       console.log(error, "404 - Not Found");
     }
-  }
   }
   //----------END UNPUBLISH---------------------------
 
@@ -195,7 +191,6 @@ export default function PendingRequests() {
   useEffect(() => {
     let isConnectedToServer = true;
     async function getData() {
-      if (Userfront.tokens.accessToken){
       try {
         let response = await fetch(`https://hyh-admin-server.herokuapp.com/`, {
           headers: {
@@ -209,7 +204,6 @@ export default function PendingRequests() {
         console.log(error, "404 - Not Found");
         setError(true);
       }
-    }
     }
     if (isConnectedToServer) {
       getData();

@@ -59,7 +59,6 @@ export default function FundedRequets() {
 
   //sending to-be-deleted item's ID to database
   async function handleDelete(e) {
-    if (Userfront.tokens.accessToken){
     try {
       let response = await fetch(`https://hyh-admin-server.herokuapp.com/delete`, {
         method: "POST",
@@ -76,7 +75,6 @@ export default function FundedRequets() {
     } catch (error) {
       console.log(error, "404 - Not Found");
     }
-  }
   }
   //-----END delete functionality-------------
 
@@ -123,7 +121,6 @@ export default function FundedRequets() {
   useEffect(() => {
     let isConnectedToServer = true;
     async function getData() {
-      if (Userfront.tokens.accessToken){
       try {
         let response = await fetch(`https://hyh-admin-server.herokuapp.com/funded-requests`, {
           headers: {
@@ -137,7 +134,6 @@ export default function FundedRequets() {
         console.log(error, "404 - Not Found");
         setError(true);
       }
-    }
     }
     if (isConnectedToServer) {
       getData();

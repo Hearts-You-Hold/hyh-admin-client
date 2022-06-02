@@ -22,7 +22,6 @@ export default function RequestsForm() {
   async function handleSubmit(e) {
     e.preventDefault();
     setFormSubmitted(true);
-    if (Userfront.tokens.accessToken){
     try {
       //displaying successful notification
       toast.success("Saved Successfully");
@@ -49,7 +48,6 @@ export default function RequestsForm() {
     } catch (error) {
       console.log(error, "404 - Not Found");
     }
-  }
   }
 
   //force reloading page after 1 second if form submitted successfully

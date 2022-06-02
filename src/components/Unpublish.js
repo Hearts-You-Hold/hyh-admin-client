@@ -40,7 +40,6 @@ export default function Unpublish() {
 
   //fetching iniital data on page load
   async function getUnpublished() {
-    if (Userfront.tokens.accessToken){
     try {
       let response = await fetch("https://hyh-admin-server.herokuapp.com/unpublish", {
         headers: {
@@ -53,7 +52,6 @@ export default function Unpublish() {
       console.log(error, "404 - Not Found");
       setError(true);
     }
-  }
   }
 
   useEffect(() => {
@@ -106,7 +104,6 @@ export default function Unpublish() {
 
   //sending request info to server to be updated
   async function handlePublish(e) {
-    if (Userfront.tokens.accessToken){
     try {
       let response = await fetch(`https://hyh-admin-server.herokuapp.com/publish`, {
         method: "POST",
@@ -133,7 +130,6 @@ export default function Unpublish() {
       window.location.reload();
     } catch (error) {
       console.log(error, "404 - Not Found");
-    }
   }
   }
   //-------END PUBLISH FUNCTIONALITY--------------
@@ -154,7 +150,6 @@ export default function Unpublish() {
 
   //sending to-be-deleted item's ID to database
   async function handleDelete(e) {
-    if (Userfront.tokens.accessToken){
     try {
       let response = await fetch(`https://hyh-admin-server.herokuapp.com/delete`, {
         method: "POST",
@@ -171,7 +166,6 @@ export default function Unpublish() {
     } catch (error) {
       console.log(error, "404 - Not Found");
     }
-  }
   }
 
   //creating table row of each unpublished item
