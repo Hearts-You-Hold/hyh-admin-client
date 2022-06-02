@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Form, FormGroup, Label, Input } from "reactstrap";
+import Userfront from "@userfront/core";
 import toast, { Toaster } from "react-hot-toast";
 import close from "../images/close.png";
 
