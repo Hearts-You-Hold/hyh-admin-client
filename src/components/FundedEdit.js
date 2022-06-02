@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Form, FormGroup, Label, Input } from "reactstrap";
+import Userfront from "@userfront/core";
 import toast, { Toaster } from "react-hot-toast";
 import close from "../images/close.png";
 
@@ -31,6 +32,7 @@ export default function Edit(props) {
   async function handleSubmit(e) {
     e.preventDefault();
     setFormSubmitted(true);
+    if (Userfront.tokens.accessToken){
     try {
       //displaying successful notification
       toast.success("Edit Saved Successfully");
@@ -57,6 +59,7 @@ export default function Edit(props) {
     } catch (error) {
       console.log(error, "404 - Not Found");
     }
+  }
   }
 
   //force reloading page after 1 second if form submitted successfully

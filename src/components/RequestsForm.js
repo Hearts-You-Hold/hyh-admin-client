@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Form, FormGroup, Label, Input, FormText } from "reactstrap";
 import { Navigate, useLocation } from "react-router-dom";
-import Userfront from "@userfront/react";
+// import Userfront from "@userfront/react";
+import Userfront from "@userfront/core";
 import toast, { Toaster } from "react-hot-toast";
 import NavBar from "./NavBar";
 import "../stylesheets/main.css";
@@ -21,6 +22,7 @@ export default function RequestsForm() {
   async function handleSubmit(e) {
     e.preventDefault();
     setFormSubmitted(true);
+    if (Userfront.tokens.accessToken){
     try {
       //displaying successful notification
       toast.success("Saved Successfully");
@@ -46,6 +48,7 @@ export default function RequestsForm() {
     } catch (error) {
       console.log(error, "404 - Not Found");
     }
+  }
   }
 
   //force reloading page after 1 second if form submitted successfully
