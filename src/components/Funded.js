@@ -68,6 +68,7 @@ export default function FundedRequets() {
         }),
         headers: {
           "Content-type": "application/json",
+          'Authorization': `Bearer ${Userfront.tokens.accessToken}`
         },
       });
       await response.json();
@@ -124,7 +125,11 @@ export default function FundedRequets() {
     async function getData() {
       if (Userfront.tokens.accessToken){
       try {
-        let response = await fetch(`https://hyh-admin-server.herokuapp.com/funded-requests`);
+        let response = await fetch(`https://hyh-admin-server.herokuapp.com/funded-requests`, {
+          headers: {
+            'Authorization': `Bearer ${Userfront.tokens.accessToken}`,
+          }
+        });
         response = await response.json();
         setPending(response);
         setDataLoaded(true);

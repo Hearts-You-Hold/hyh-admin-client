@@ -73,6 +73,7 @@ export default function PendingRequests() {
         }),
         headers: {
           "Content-type": "application/json",
+          'Authorization': `Bearer ${Userfront.tokens.accessToken}`
         },
       });
       await response.json();
@@ -139,6 +140,7 @@ export default function PendingRequests() {
         }),
         headers: {
           "Content-type": "application/json",
+          'Authorization': `Bearer ${Userfront.tokens.accessToken}`
         },
       });
       await response.json();
@@ -195,7 +197,11 @@ export default function PendingRequests() {
     async function getData() {
       if (Userfront.tokens.accessToken){
       try {
-        let response = await fetch(`https://hyh-admin-server.herokuapp.com/`);
+        let response = await fetch(`https://hyh-admin-server.herokuapp.com/`, {
+          headers: {
+            'Authorization': `Bearer ${Userfront.tokens.accessToken}`
+          }
+        });
         response = await response.json();
         setPending(response);
         setDataLoaded(true);

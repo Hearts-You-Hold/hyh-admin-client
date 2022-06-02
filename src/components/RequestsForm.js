@@ -42,6 +42,7 @@ export default function RequestsForm() {
         }),
         headers: {
           "Content-type": "application/json",
+          'Authorization': `Bearer ${Userfront.tokens.accessToken}`
         },
       });
       await response.json();

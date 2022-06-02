@@ -53,6 +53,7 @@ export default function Edit(props) {
         }),
         headers: {
           "Content-type": "application/json",
+          'Authorization': `Bearer ${Userfront.tokens.accessToken}`
         },
       });
       await response.json();

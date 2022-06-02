@@ -42,7 +42,11 @@ export default function Unpublish() {
   async function getUnpublished() {
     if (Userfront.tokens.accessToken){
     try {
-      let response = await fetch("https://hyh-admin-server.herokuapp.com/unpublish");
+      let response = await fetch("https://hyh-admin-server.herokuapp.com/unpublish", {
+        headers: {
+          'Authorization': `Bearer ${Userfront.tokens.accessToken}`
+        }
+      });
       response = await response.json();
       setPending(response);
     } catch (error) {
@@ -122,6 +126,7 @@ export default function Unpublish() {
         }),
         headers: {
           "Content-type": "application/json",
+          'Authorization': `Bearer ${Userfront.tokens.accessToken}`
         },
       });
       await response.json();
@@ -158,6 +163,7 @@ export default function Unpublish() {
         }),
         headers: {
           "Content-type": "application/json",
+          'Authorization': `Bearer ${Userfront.tokens.accessToken}`
         },
       });
       await response.json();
